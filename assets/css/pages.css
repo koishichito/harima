@@ -1,0 +1,745 @@
+/* ============================================
+   新規ページ用スタイル
+============================================ */
+
+/* パンくずリスト */
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 1rem 0;
+    margin-top: 80px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.breadcrumb a {
+    color: #003d7c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #666;
+}
+
+/* ページヒーロー */
+.page-hero {
+    background: linear-gradient(135deg, #003d7c, #0052a3);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero .hero-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.95;
+}
+
+/* イントロボックス */
+.intro-box {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border-left: 4px solid #003d7c;
+}
+
+.intro-box p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* タイムライン */
+.timeline-section {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #003d7c, #0052a3);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    flex: 0 0 120px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003d7c;
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #003d7c;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 連絡先情報カード */
+.contact-info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-card h4 {
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* 統計カード */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-label {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* 業種カード */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.industry-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-4px);
+}
+
+.industry-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.industry-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+/* メリットグリッド */
+.benefits-section {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.benefit-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+/* 学生向けメッセージボックス */
+.student-message-box {
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.message-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.student-message-box h3 {
+    color: #003d7c;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.student-message-box p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.message-cta {
+    margin-top: 2rem;
+}
+
+/* 入会情報グリッド */
+.admission-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    color: #003d7c;
+    margin-bottom: 1rem;
+}
+
+.info-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.info-note {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* 注意事項ボックス */
+.notice-box {
+    background: #fff3e0;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #f57c00;
+    margin-bottom: 3rem;
+}
+
+.notice-box h3 {
+    color: #f57c00;
+    margin-bottom: 1rem;
+}
+
+.notice-box ul {
+    margin-left: 1.5rem;
+}
+
+.notice-box li {
+    margin-bottom: 0.5rem;
+}
+
+/* フォームスタイル */
+.admission-form,
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.required {
+    color: #d32f2f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #003d7c;
+}
+
+.form-note {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.address-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* 連絡先CTAボックス */
+.contact-cta-box {
+    background: #e3f2fd;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-cta-box h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.contact-cta-box p {
+    margin-bottom: 1.5rem;
+}
+
+/* 連絡方法グリッド */
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.contact-method-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-method-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-method-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method-value {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method-note {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.faq-question,
+.faq-answer {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #003d7c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.faq-question h3 {
+    color: #003d7c;
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.faq-answer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.faq-answer .faq-icon {
+    background: #0052a3;
+}
+
+/* 30周年バナー */
+.anniversary-banner {
+    background: linear-gradient(135deg, #003d7c, #0052a3);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.anniversary-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.anniversary-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* マイルストーングリッド */
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.milestone-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.milestone-card:hover {
+    transform: translateY(-4px);
+}
+
+.milestone-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.milestone-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+/* ビジョンセクション */
+.vision-section {
+    background: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.vision-text {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.vision-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.vision-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.vision-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+/* パートナーグリッド */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.partner-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+}
+
+.partner-card.support {
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+}
+
+.partner-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.partner-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+/* ケーススタディグリッド */
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.case-study-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.case-study-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.case-study-card h3 {
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+/* セクション説明 */
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* アクティブナビゲーション */
+.nav-links a.active {
+    color: #003d7c;
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .stats-grid,
+    .industry-grid,
+    .benefits-grid,
+    .contact-methods-grid,
+    .case-study-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .admission-info-grid,
+    .milestone-grid,
+    .vision-cards,
+    .partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin-top: 70px;
+    }
+    
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        padding-left: 80px;
+    }
+    
+    .timeline-year {
+        position: absolute;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        font-size: 1.125rem;
+    }
+    
+    .stats-grid,
+    .industry-grid,
+    .benefits-grid,
+    .admission-info-grid,
+    .contact-methods-grid,
+    .milestone-grid,
+    .vision-cards,
+    .partner-grid,
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -120,7 +120,7 @@ nav {
 ============================================ */
 .hero {
     margin-top: 73px;
-    background: url('hero-bg.jpg') center center / cover no-repeat;
+    background: url('../images/hero-bg.jpg') center center / cover no-repeat;
     background-attachment: fixed;
     padding: 8rem 2rem;
     text-align: center;

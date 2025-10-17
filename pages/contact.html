@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="はりま産学交流会 お問い合わせ - ご質問・ご相談はお気軽にお問い合わせください">
+    <title>お問い合わせ | はりま産学交流会</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="はりま産学交流会" class="logo-image">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="メニュー" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="about.html">交流会のご紹介</a></li>
+                <li><a href="members.html">会員企業のご紹介</a></li>
+                <li><a href="admission.html">入会申込</a></li>
+                <li><a href="contact.html" class="active">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">ホーム</a> &gt; <span>お問い合わせ</span>
+        </div>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>お問い合わせ</h1>
+            <p class="hero-subtitle">ご質問・ご相談はお気軽にお問い合わせください</p>
+        </div>
+    </section>
+
+    <!-- お問い合わせフォーム -->
+    <section class="container">
+        <h2 class="section-title section-title-center">お問い合わせフォーム</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="nameKana">お名前（フリガナ） <span class="required">*</span></label>
+                    <input type="text" id="nameKana" name="nameKana" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <p class="form-note">※確認のためもう一度入力してください</p>
+            </div>
+
+            <div class="form-group">
+                <label for="emailConfirm">メールアドレス（確認用） <span class="required">*</span></label>
+                <input type="email" id="emailConfirm" name="emailConfirm" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone">
+                <p class="form-note">※日中に連絡がとれる、もしくは伝言が残せる番号</p>
+            </div>
+
+            <div class="form-group">
+                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="8" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">送信する</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- その他の連絡方法 -->
+    <section class="container">
+        <h2 class="section-title section-title-center">その他の連絡方法</h2>
+        <div class="contact-methods-grid">
+            <div class="contact-method-card">
+                <div class="contact-method-icon">📞</div>
+                <h3>電話</h3>
+                <p class="contact-method-value">079-223-6555</p>
+                <p class="contact-method-note">平日 9:00〜17:00</p>
+            </div>
+            <div class="contact-method-card">
+                <div class="contact-method-icon">📠</div>
+                <h3>FAX</h3>
+                <p class="contact-method-value">079-288-0047</p>
+                <p class="contact-method-note">24時間受付</p>
+            </div>
+            <div class="contact-method-card">
+                <div class="contact-method-icon">📧</div>
+                <h3>メール</h3>
+                <p class="contact-method-value">info@sangaku.jp</p>
+                <p class="contact-method-note">24時間受付</p>
+            </div>
+            <div class="contact-method-card">
+                <div class="contact-method-icon">🏢</div>
+                <h3>住所</h3>
+                <p class="contact-method-value">〒670-8505<br>兵庫県姫路市下寺町43</p>
+                <p class="contact-method-note">姫路商工会議所内</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="container">
+        <h2 class="section-title section-title-center">よくある質問</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">Q</span>
+                    <h3>入会するにはどうすればいいですか?</h3>
+                </div>
+                <div class="faq-answer">
+                    <span class="faq-icon">A</span>
+                    <p>入会申込ページから必要事項をご記入の上、お申し込みください。事務局より折り返しご連絡いたします。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">Q</span>
+                    <h3>学生でも参加できますか?</h3>
+                </div>
+                <div class="faq-answer">
+                    <span class="faq-icon">A</span>
+                    <p>はい、学生の皆さんも大歓迎です。プロジェクトコンテストやイベントへの参加が可能です。詳しくはお問い合わせください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">Q</span>
+                    <h3>年会費以外に費用はかかりますか?</h3>
+                </div>
+                <div class="faq-answer">
+                    <span class="faq-icon">A</span>
+                    <p>ほとんどのイベントへの参加費は年会費に含まれています。一部の特別イベントや懇親会では別途費用がかかる場合があります。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">Q</span>
+                    <h3>途中退会はできますか?</h3>
+                </div>
+                <div class="faq-answer">
+                    <span class="faq-icon">A</span>
+                    <p>はい、可能です。退会をご希望の場合は、事務局までご連絡ください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">Q</span>
+                    <h3>イベントの開催頻度はどのくらいですか?</h3>
+                </div>
+                <div class="faq-answer">
+                    <span class="faq-icon">A</span>
+                    <p>例会は月1回程度、講演会や視察旅行は年数回開催しています。詳しくは事業計画をご覧ください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>入会をご検討の方へ</h2>
+            <p>はりま産学交流会では、新規会員を募集しています。</p>
+            <a href="admission.html" class="btn btn-primary">入会申込はこちら →</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="../assets/images/logo.png" alt="はりま産学交流会" class="footer-logo">
+                    <p class="footer-description">企業と学生をつなぐ、地域密着型の産学連携プラットフォーム</p>
+                </div>
+                <div class="footer-column">
+                    <h4>クイックリンク</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">トップページ</a></li>
+                        <li><a href="about.html">交流会のご紹介</a></li>
+                        <li><a href="members.html">会員企業のご紹介</a></li>
+                        <li><a href="admission.html">入会申込</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>お問い合わせ</h4>
+                    <p>〒670-8505<br>兵庫県姫路市下寺町43<br>姫路商工会議所内</p>
+                    <p>Tel. 079-223-6555<br>Fax. 079-288-0047</p>
+                    <p>info@sangaku.jp</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 はりま産学交流会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // フォームバリデーション
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const emailConfirm = document.getElementById('emailConfirm').value;
+            
+            if (email !== emailConfirm) {
+                alert('メールアドレスが一致しません。もう一度ご確認ください。');
+                return;
+            }
+            
+            alert('お問い合わせを受け付けました。ありがとうございます。\n事務局より折り返しご連絡いたします。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+

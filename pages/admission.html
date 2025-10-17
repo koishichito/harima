@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="はりま産学交流会 入会申込 - 年会費3万円で講演会、例会、懇親会、視察旅行、展示会への参加が可能">
+    <title>入会申込 | はりま産学交流会</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="はりま産学交流会" class="logo-image">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="メニュー" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="about.html">交流会のご紹介</a></li>
+                <li><a href="members.html">会員企業のご紹介</a></li>
+                <li><a href="admission.html" class="active">入会申込</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">ホーム</a> &gt; <span>入会申込</span>
+        </div>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>入会申込</h1>
+            <p class="hero-subtitle">はりま産学交流会への入会をご検討の方へ</p>
+        </div>
+    </section>
+
+    <!-- 入会のご案内 -->
+    <section class="container">
+        <h2 class="section-title section-title-center">入会のご案内</h2>
+        <div class="admission-info-grid">
+            <div class="info-card">
+                <div class="info-icon">💰</div>
+                <h3>会費</h3>
+                <p class="info-value">年間 3万円</p>
+                <p class="info-note">途中入会の場合は月割になります</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🎁</div>
+                <h3>特典</h3>
+                <p>講演会、例会、懇親会、視察旅行、展示会への参加</p>
+                <p class="info-note">ほとんどの事業への参加費は年会費に含まれています</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <h3>必要環境</h3>
+                <p>個人のメールアドレス</p>
+                <p>インターネット環境</p>
+                <p class="info-note">環境が十分でない場合は、事務局にご相談ください</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 注意事項 -->
+    <section class="container">
+        <div class="notice-box">
+            <h3>※ 注意事項</h3>
+            <ul>
+                <li>ご入会いただくには個人のメールアドレスとインターネット環境が欠かせません。</li>
+                <li>環境が十分でない場合は、事務局にご相談ください。</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 入会フォーム -->
+    <section class="container">
+        <h2 class="section-title section-title-center">入会のお申し込み</h2>
+        <form class="admission-form" id="admissionForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="nameKana">お名前（フリガナ） <span class="required">*</span></label>
+                    <input type="text" id="nameKana" name="nameKana" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <p class="form-note">※確認のためもう一度入力してください</p>
+            </div>
+
+            <div class="form-group">
+                <label for="emailConfirm">メールアドレス（確認用） <span class="required">*</span></label>
+                <input type="email" id="emailConfirm" name="emailConfirm" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company">会社名 <span class="required">*</span></label>
+                <input type="text" id="company" name="company" required>
+                <p class="form-note">個人の方は「個人」とご記入ください</p>
+            </div>
+
+            <div class="form-group">
+                <label for="position">役職</label>
+                <input type="text" id="position" name="position">
+            </div>
+
+            <div class="form-group">
+                <label>ご住所</label>
+                <div class="address-group">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postalCode">郵便番号</label>
+                            <input type="text" id="postalCode" name="postalCode" placeholder="000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="prefecture">都道府県</label>
+                            <input type="text" id="prefecture" name="prefecture">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">市区町村</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">番地建物</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">電話番号 <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+                <p class="form-note">※日中に連絡がとれる、もしくは伝言が残せる番号のご記入をお願いします</p>
+            </div>
+
+            <div class="form-group">
+                <label for="fax">Fax番号</label>
+                <input type="tel" id="fax" name="fax">
+            </div>
+
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="url" id="url" name="url" placeholder="https://">
+            </div>
+
+            <div class="form-group">
+                <label for="business">事業内容</label>
+                <textarea id="business" name="business" rows="5"></textarea>
+                <p class="form-note">個人の方は入会の目的をご記入ください</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">送信する</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="container">
+        <div class="contact-cta-box">
+            <h3>ご不明な点がございましたら</h3>
+            <p>入会に関するご質問は、お気軽にお問い合わせください</p>
+            <a href="contact.html" class="btn btn-secondary">お問い合わせはこちら →</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="../assets/images/logo.png" alt="はりま産学交流会" class="footer-logo">
+                    <p class="footer-description">企業と学生をつなぐ、地域密着型の産学連携プラットフォーム</p>
+                </div>
+                <div class="footer-column">
+                    <h4>クイックリンク</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">トップページ</a></li>
+                        <li><a href="about.html">交流会のご紹介</a></li>
+                        <li><a href="members.html">会員企業のご紹介</a></li>
+                        <li><a href="admission.html">入会申込</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>お問い合わせ</h4>
+                    <p>〒670-8505<br>兵庫県姫路市下寺町43<br>姫路商工会議所内</p>
+                    <p>Tel. 079-223-6555<br>Fax. 079-288-0047</p>
+                    <p>info@sangaku.jp</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2025 はりま産学交流会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // フォームバリデーション
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const emailConfirm = document.getElementById('emailConfirm').value;
+            
+            if (email !== emailConfirm) {
+                alert('メールアドレスが一致しません。もう一度ご確認ください。');
+                return;
+            }
+            
+            alert('入会申込を受け付けました。ありがとうございます。\n事務局より折り返しご連絡いたします。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
