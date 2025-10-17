@@ -1465,9 +1465,29 @@ footer {
 /* ============================================
    連携組織セクション
 ============================================ */
+.partners-section-wrapper {
+    position: relative;
+    background-image: url('../images/himeji-castle-modern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.partners-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 0;
+}
+
 .partners-section {
+    position: relative;
+    z-index: 1;
     padding: 2rem 2rem;
-    background: #f8f9fa;
 }
 
 /* ============================================
