@@ -1,0 +1,1101 @@
+/* ============================================
+   はりま産学交流会 - リブランディング
+   青基調 | リジッド9割 + リッチ1割
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: #fff;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+/* ============================================
+   ヘッダー
+============================================ */
+header {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 2px 8px rgba(0, 61, 124, 0.08);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #003d7c;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #003d7c, #0052a3);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #003d7c;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   ヒーローセクション
+============================================ */
+.hero {
+    margin-top: 73px;
+    background: url('hero-bg.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 61, 124, 0.85) 0%,
+        rgba(0, 74, 153, 0.75) 50%,
+        rgba(0, 61, 124, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.5), #fff);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+    z-index: 3;
+}
+
+@keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-badges {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.875rem;
+    color: #003d7c;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.badge:hover {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   ボタン
+============================================ */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    color: #003d7c;
+    background-size: 200% 200%;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* コンテストバナー以降のプライマリボタン */
+.contest-banner .btn-primary,
+.container .btn-primary,
+.cta-section .btn-primary {
+    background: linear-gradient(135deg, #003d7c, #0052a3);
+    color: white;
+}
+
+.contest-banner .btn-primary:hover,
+.container .btn-primary:hover,
+.cta-section .btn-primary:hover {
+    background-position: 100% 0;
+    box-shadow: 0 4px 12px rgba(0, 61, 124, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #003d7c;
+    border-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* コンテナ内やホワイト背景での btn-secondary */
+.container .btn-secondary,
+.contact-section .btn-secondary,
+.cta-section .btn-secondary {
+    background: white;
+    color: #003d7c;
+    border: 2px solid #003d7c;
+    backdrop-filter: none;
+}
+
+.container .btn-secondary:hover,
+.contact-section .btn-secondary:hover,
+.cta-section .btn-secondary:hover {
+    background: #003d7c;
+    color: white;
+    border-color: #003d7c;
+}
+
+/* ============================================
+   コンテスト告知
+============================================ */
+.contest-banner {
+    background: url('procon.jpg') center center no-repeat;
+    background-size: contain;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.contest-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 61, 124, 0.88) 0%, rgba(0, 74, 153, 0.88) 100%);
+    z-index: 0;
+}
+
+.contest-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contest-label {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    backdrop-filter: blur(10px);
+}
+
+.contest-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.contest-description {
+    font-size: 1.0625rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+
+.contest-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2.5rem 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+}
+
+.contest-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   メインコンテンツ
+============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: #003d7c;
+    letter-spacing: 0.05em;
+}
+
+.section-title-center {
+    text-align: center;
+}
+
+.lead-text {
+    text-align: center;
+    font-size: 1.0625rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* ============================================
+   カードグリッド
+============================================ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.1);
+    transform: translateY(-4px);
+    border-color: #003d7c;
+}
+
+.card-header {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    transition: background 0.3s ease;
+}
+
+.card:hover .card-header {
+    background: linear-gradient(135deg, #f0f7ff, #f8f9fa);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #003d7c;
+    letter-spacing: 0.05em;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 0.9375rem;
+}
+
+.card-link {
+    color: #003d7c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+}
+
+.card-link:hover {
+    gap: 0.75rem;
+}
+
+/* ============================================
+   イベントハイライト（次回イベント案内）
+============================================ */
+.event-highlight {
+    background: url('sozorekai.jpg') center center no-repeat;
+    background-size: contain;
+    border: 2px solid #003d7c;
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
+}
+
+.event-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 0;
+}
+
+.event-highlight > * {
+    position: relative;
+    z-index: 1;
+}
+
+.event-highlight-title {
+    font-size: 1.75rem;
+    color: #003d7c;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.event-highlight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.event-highlight-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #003d7c;
+    min-width: 100px;
+    font-size: 0.9375rem;
+}
+
+.info-value {
+    color: #333;
+    font-size: 0.9375rem;
+}
+
+.event-highlight-cta {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/* ============================================
+   イベント情報
+============================================ */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.event-item {
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid #e5e5e5;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2.5rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.event-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.1);
+    border-color: #003d7c;
+    transform: translateX(4px);
+}
+
+.event-date {
+    text-align: center;
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem 1rem;
+    min-width: 100px;
+    transition: all 0.3s ease;
+}
+
+.event-item:hover .event-date {
+    background: linear-gradient(135deg, #003d7c, #0052a3);
+    border-color: #003d7c;
+}
+
+.event-month {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.event-item:hover .event-month {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.event-day {
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    color: #003d7c;
+    transition: color 0.3s ease;
+}
+
+.event-item:hover .event-day {
+    color: white;
+}
+
+.event-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #003d7c;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.event-details {
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.event-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* ============================================
+   ビデオセクション
+============================================ */
+.video-section {
+    background: linear-gradient(135deg, #f0f7ff 0%, #f8f9fa 100%);
+    padding: 5rem 2rem;
+}
+
+.video-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   メニューグリッド
+============================================ */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.menu-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.12);
+    transform: translateY(-4px);
+    border-color: #003d7c;
+}
+
+.menu-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu-card-title {
+    font-size: 1.125rem;
+    color: #003d7c;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* ============================================
+   実績セクション
+============================================ */
+.achievements {
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f7ff 100%);
+    padding: 5rem 2rem;
+    margin: 5rem 0;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: white;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.12);
+    transform: translateY(-4px);
+    border-color: #003d7c;
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #003d7c;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-label {
+    color: #666;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================
+   連携組織
+============================================ */
+.partner-category {
+    margin-bottom: 3rem;
+}
+
+.partner-category-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #003d7c;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #f8f9fa;
+    color: #666;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid #e5e5e5;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #003d7c;
+    color: white;
+    border-color: #003d7c;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 61, 124, 0.15);
+}
+
+.cta-box {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.cta-box p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+}
+
+/* ============================================
+   CTAセクション
+============================================ */
+.cta-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #003d7c;
+    letter-spacing: 0.05em;
+}
+
+.cta-section p {
+    font-size: 1.0625rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* ============================================
+   お問い合わせセクション
+============================================ */
+.contact-section {
+    background: white;
+    padding: 5rem 0;
+}
+
+.contact-section .cta-buttons {
+    justify-content: center;
+}
+
+/* ============================================
+   フッター
+============================================ */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.footer-section p {
+    color: #999;
+    line-height: 1.8;
+    font-size: 0.875rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.875rem;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   レスポンシブ
+============================================ */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1.5rem;
+        background-attachment: scroll;
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .contest-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #e5e5e5;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .event-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .event-date {
+        margin: 0 auto;
+    }
+
+    .event-meta {
+        justify-content: center;
+    }
+
+    nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-image {
+        height: 35px;
+    }
+
+    .contest-stats {
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-highlight {
+        padding: 2rem;
+    }
+
+    .event-highlight-title {
+        font-size: 1.5rem;
+    }
+
+    .info-row {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .info-label {
+        min-width: auto;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 30px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .hero-badges {
+        gap: 1rem;
+    }
+
+    .badge {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.8125rem;
+    }
+
+    .contest-title {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.875rem;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-highlight {
+        padding: 1.5rem;
+    }
+
+    .event-highlight-title {
+        font-size: 1.25rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
