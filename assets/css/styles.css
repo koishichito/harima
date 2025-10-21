@@ -1,7 +1,22 @@
 /* ============================================
    はりま産学交流会 - リブランディング
-   青基調 | リジッド9割 + リッチ1割
+   ロゴの赤と青を基調としたデザイン
 ============================================ */
+
+:root {
+    /* プライマリカラー（青系） */
+    --primary-blue: #284a94;
+    --primary-blue-light: #3d5fb8;
+    --primary-blue-dark: #1a3366;
+    
+    /* セカンダリカラー（赤系） */
+    --accent-red: #b82b2c;
+    --accent-red-light: #d63f40;
+    --accent-red-dark: #8a2122;
+    
+    /* 旧カラー（互換性のため残す） */
+    --old-blue: #003d7c;
+}
 
 * {
     margin: 0;
@@ -33,7 +48,7 @@ header {
 }
 
 header:hover {
-    box-shadow: 0 2px 8px rgba(0, 61, 124, 0.08);
+    box-shadow: 0 2px 8px rgba(40, 74, 148, 0.08);
 }
 
 nav {
@@ -76,7 +91,7 @@ nav {
 .mobile-menu-toggle span {
     width: 24px;
     height: 2px;
-    background: #003d7c;
+    background: var(--primary-blue);
     transition: all 0.3s ease;
 }
 
@@ -103,12 +118,12 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #003d7c, #0052a3);
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #003d7c;
+    color: var(--primary-blue);
 }
 
 .nav-links a:hover::after {
@@ -140,9 +155,9 @@ nav {
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(0, 61, 124, 0.85) 0%,
-        rgba(0, 74, 153, 0.75) 50%,
-        rgba(0, 61, 124, 0.85) 100%
+        rgba(40, 74, 148, 0.85) 0%,
+        rgba(184, 43, 44, 0.75) 30%,
+        rgba(40, 74, 148, 0.85) 100%
     );
     z-index: 1;
 }
@@ -204,7 +219,7 @@ nav {
     padding: 0.75rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 0.875rem;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 500;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -261,7 +276,7 @@ nav {
 
 .btn-primary {
     background: linear-gradient(135deg, #fff, #f0f0f0);
-    color: #003d7c;
+    color: var(--primary-blue);
     background-size: 200% 200%;
     font-weight: 600;
 }
@@ -276,7 +291,7 @@ nav {
 .contest-banner .btn-primary,
 .container .btn-primary,
 .cta-section .btn-primary {
-    background: linear-gradient(135deg, #003d7c, #0052a3);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
     color: white;
 }
 
@@ -284,7 +299,7 @@ nav {
 .container .btn-primary:hover,
 .cta-section .btn-primary:hover {
     background-position: 100% 0;
-    box-shadow: 0 4px 12px rgba(0, 61, 124, 0.3);
+    box-shadow: 0 4px 12px rgba(40, 74, 148, 0.3);
 }
 
 .btn-secondary {
@@ -296,7 +311,7 @@ nav {
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 1);
-    color: #003d7c;
+    color: var(--primary-blue);
     border-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -306,17 +321,17 @@ nav {
 .contact-section .btn-secondary,
 .cta-section .btn-secondary {
     background: white;
-    color: #003d7c;
-    border: 2px solid #003d7c;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
     backdrop-filter: none;
 }
 
 .container .btn-secondary:hover,
 .contact-section .btn-secondary:hover,
 .cta-section .btn-secondary:hover {
-    background: #003d7c;
+    background: var(--primary-blue);
     color: white;
-    border-color: #003d7c;
+    border-color: var(--primary-blue);
 }
 
 /* ============================================
@@ -338,7 +353,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 61, 124, 0.88) 0%, rgba(0, 74, 153, 0.88) 100%);
+    background: linear-gradient(135deg, rgba(40, 74, 148, 0.88) 0%, rgba(184, 43, 44, 0.85) 50%, rgba(40, 74, 148, 0.88) 100%);
     z-index: 0;
 }
 
@@ -422,7 +437,7 @@ nav {
     text-align: left;
     margin-bottom: 3rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     letter-spacing: 0.05em;
 }
 
@@ -459,9 +474,9 @@ nav {
 }
 
 .card:hover {
-    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.1);
+    box-shadow: 0 4px 16px rgba(40, 74, 148, 0.1);
     transform: translateY(-4px);
-    border-color: #003d7c;
+    border-color: var(--primary-blue);
 }
 
 .card-header {
@@ -484,7 +499,7 @@ nav {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     letter-spacing: 0.05em;
 }
 
@@ -500,7 +515,7 @@ nav {
 }
 
 .card-link {
-    color: #003d7c;
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.875rem;
@@ -520,7 +535,7 @@ nav {
 .event-highlight {
     background: url('sozorekai.jpg') center center no-repeat;
     background-size: contain;
-    border: 2px solid #003d7c;
+    border: 2px solid var(--primary-blue);
     padding: 3rem;
     margin: 0 auto;
     max-width: 900px;
@@ -545,7 +560,7 @@ nav {
 
 .event-highlight-title {
     font-size: 1.75rem;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 600;
     text-align: center;
     margin-bottom: 2rem;
@@ -578,7 +593,7 @@ nav {
 
 .info-label {
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     min-width: 100px;
     font-size: 0.9375rem;
 }
@@ -614,8 +629,8 @@ nav {
 }
 
 .event-item:hover {
-    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.1);
-    border-color: #003d7c;
+    box-shadow: 0 4px 16px rgba(40, 74, 148, 0.1);
+    border-color: var(--primary-blue);
     transform: translateX(4px);
 }
 
@@ -629,8 +644,8 @@ nav {
 }
 
 .event-item:hover .event-date {
-    background: linear-gradient(135deg, #003d7c, #0052a3);
-    border-color: #003d7c;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    border-color: var(--primary-blue);
 }
 
 .event-month {
@@ -650,7 +665,7 @@ nav {
     font-size: 2rem;
     font-weight: 300;
     display: block;
-    color: #003d7c;
+    color: var(--primary-blue);
     transition: color 0.3s ease;
 }
 
@@ -661,7 +676,7 @@ nav {
 .event-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 600;
     letter-spacing: 0.05em;
 }
@@ -720,9 +735,9 @@ nav {
 }
 
 .menu-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.12);
+    box-shadow: 0 4px 16px rgba(40, 74, 148, 0.12);
     transform: translateY(-4px);
-    border-color: #003d7c;
+    border-color: var(--primary-blue);
 }
 
 .menu-card-icon {
@@ -732,7 +747,7 @@ nav {
 
 .menu-card-title {
     font-size: 1.125rem;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 600;
     letter-spacing: 0.05em;
     margin: 0;
@@ -764,15 +779,15 @@ nav {
 }
 
 .achievement-item:hover {
-    box-shadow: 0 4px 16px rgba(0, 61, 124, 0.12);
+    box-shadow: 0 4px 16px rgba(40, 74, 148, 0.12);
     transform: translateY(-4px);
-    border-color: #003d7c;
+    border-color: var(--primary-blue);
 }
 
 .achievement-number {
     font-size: 3rem;
     font-weight: 300;
-    color: #003d7c;
+    color: var(--primary-blue);
     margin-bottom: 0.5rem;
 }
 
@@ -792,7 +807,7 @@ nav {
 .partner-category-title {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 600;
     letter-spacing: 0.05em;
 }
@@ -814,9 +829,9 @@ nav {
 }
 
 .tag:hover {
-    background: #003d7c;
+    background: var(--primary-blue);
     color: white;
-    border-color: #003d7c;
+    border-color: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0, 61, 124, 0.15);
 }
@@ -848,7 +863,7 @@ nav {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     letter-spacing: 0.05em;
 }
 
@@ -1180,15 +1195,15 @@ footer {
 }
 
 .menu-card-compact:hover {
-    border-color: #003d7c;
-    box-shadow: 0 4px 12px rgba(0, 61, 124, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 4px 12px rgba(40, 74, 148, 0.1);
     transform: translateY(-2px);
 }
 
 .menu-card-compact h3 {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     margin-bottom: 0.5rem;
     letter-spacing: 0.02em;
 }
@@ -1240,7 +1255,7 @@ footer {
 .contest-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #003d7c;
+    color: var(--primary-blue);
     margin-bottom: 1rem;
     letter-spacing: 0.02em;
 }
@@ -1317,7 +1332,7 @@ footer {
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    color: #003d7c;
+    color: var(--primary-blue);
 }
 
 .stat-label {
@@ -1386,7 +1401,7 @@ footer {
 .activity-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     margin-bottom: 0.75rem;
 }
 
@@ -1419,7 +1434,7 @@ footer {
 .benefit-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid #e3f2fd;
@@ -1442,7 +1457,7 @@ footer {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #003d7c;
+    color: var(--primary-blue);
     font-weight: 600;
 }
 
@@ -1504,7 +1519,7 @@ footer {
 
 .contact-label {
     font-weight: 600;
-    color: #003d7c;
+    color: var(--primary-blue);
     min-width: 80px;
 }
 
@@ -1558,4 +1573,91 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+}
+
+/* ============================================
+   赤色アクセント要素
+============================================ */
+
+/* 重要なCTAボタンに赤色を使用 */
+.btn-accent {
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-red-light));
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, var(--accent-red-dark), var(--accent-red));
+    box-shadow: 0 6px 20px rgba(184, 43, 44, 0.4);
+    transform: translateY(-3px);
+}
+
+/* 赤色のバッジ */
+.badge-accent {
+    background: var(--accent-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.badge-accent:hover {
+    background: var(--accent-red-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 43, 44, 0.3);
+}
+
+/* セクションタイトルに赤のアクセント */
+.section-title-accent {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+}
+
+/* 赤青グラデーションボーダー */
+.border-gradient {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(90deg, var(--primary-blue), var(--accent-red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+/* ホバー時に赤色に変化するリンク */
+.link-red-hover {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-red-hover:hover {
+    color: var(--accent-red);
+}
+
+/* 赤青グラデーション背景セクション */
+.section-gradient-bg {
+    background: linear-gradient(135deg, 
+                rgba(40, 74, 148, 0.05) 0%, 
+                rgba(184, 43, 44, 0.05) 50%, 
+                rgba(40, 74, 148, 0.05) 100%);
+    padding: 5rem 2rem;
 }
